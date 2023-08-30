@@ -1,0 +1,28 @@
+[
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Admin",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "dumbledore@hogwarts.edu",
+      "type": "User"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Teacher",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "snape@hogwarts.edu",
+      "type": "User"
+    }
+  }
+]

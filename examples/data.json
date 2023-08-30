@@ -1,0 +1,78 @@
+[
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Admin",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "delete",
+      "type": "Action"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Teacher",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "delete",
+      "type": "Action"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [],
+    "uid": {
+      "id": "cedar-agent.pdf",
+      "type": "Document"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [],
+    "uid": {
+      "id": "Admin",
+      "type": "Role"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [],
+    "uid": {
+      "id": "Teacher",
+      "type": "Role"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Admin",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "dumbledore@hogwarts.edu",
+      "type": "User"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [
+      {
+        "id": "Teacher",
+        "type": "Role"
+      }
+    ],
+    "uid": {
+      "id": "snape@hogwarts.edu",
+      "type": "User"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "attrs": {},
+    "parents": [],
+    "uid": {
+      "id": "Admin",
+      "type": "Role"
+    }
+  },
+  {
+    "attrs": {},
+    "parents": [],
+    "uid": {
+      "id": "Teacher",
+      "type": "Role"
+    }
+  }
+]
