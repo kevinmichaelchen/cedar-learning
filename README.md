@@ -20,18 +20,24 @@ I'm using a few tools here:
 [rapidoc]: http://localhost:8180/rapidoc
 [swagger]: http://localhost:8180/swagger-ui
 
-Both of these projects are available in the Tea package manager
+Both of these projects are available in the [Tea][tea] package manager
 
 ```
 tea --sync cedar-agent
 tea --sync cedar
 ```
 
+[tea]: https://docs.tea.xyz/getting-started/install-tea
+
 ## Further Research
 
+- Policy [Templates][templates]
+  - We can't write a distinct policy for every principal/resource combination. That would be crazy.
 - Strong typing with [schemas][schemas]
 - One-liner to stringify all policies into one JSON file
+- Calling this from Golang services?
 
+[template]: https://docs.cedarpolicy.com/templates.html
 [schemas]: https://docs.cedarpolicy.com/schema.html
 
 ## Tasks
