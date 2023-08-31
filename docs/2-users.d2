@@ -32,7 +32,13 @@ snape: Severus Snape {
   shape: person
 }
 
-dumbledore -> hogwarts: Admin
+dumbledore -> hogwarts: Admin {
+  style: {
+    animated: true
+    stroke: deepskyblue
+    stroke-width: 3
+  }
+}
 snape -> hogwarts: Teacher
 
 maxime: Olympe Maxime {
