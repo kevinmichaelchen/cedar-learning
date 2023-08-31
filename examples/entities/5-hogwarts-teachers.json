@@ -28,6 +28,126 @@
       {
         "id": "hogwarts",
         "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_defense_against_dark_arts",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "alastor.moody@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_defense_against_dark_arts",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "hagrid@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "dolores.umbridge@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_defense_against_dark_arts",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "sprout@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_herbology",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "remus.lupin@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_defense_against_dark_arts",
+        "type": "Platform::Classroom"
       }
     ],
     "attrs": {

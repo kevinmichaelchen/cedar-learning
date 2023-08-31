@@ -47,9 +47,10 @@
           }
         }
       },
-      "Child": {
+      "Student": {
         "memberOfTypes": [
-          "Classroom"
+          "Classroom",
+          "OrganizationalUnit"
         ],
         "shape": {
           "type": "Record",
@@ -58,21 +59,21 @@
       }
     },
     "actions": {
-      "viewChild": {
+      "viewStudent": {
         "appliesTo": {
           "principalTypes": [
             "Teacher",
             "Admin"
           ],
           "resourceTypes": [
-            "Child"
+            "Student"
           ]
         }
       },
       "viewClassroom": {
         "memberOf": [
           {
-            "id": "viewChild",
+            "id": "viewStudent",
             "type": "Action"
           }
         ],

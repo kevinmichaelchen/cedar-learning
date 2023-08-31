@@ -11,5 +11,122 @@
       }
     ],
     "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_charms",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_defense_against_dark_arts",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_herbology",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_history",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_potions",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_transfiguration",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_divination",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_muggle_studies",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_alchemy",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
   }
 ]
