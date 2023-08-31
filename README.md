@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./forest.jpg" width="600" />
+  <img width="600" src="https://github.com/kevinmichaelchen/cedar-learning/assets/5129994/6c5b1219-4fb1-4f21-a9a7-01baf4788341" />
 </p>
 
 Just me learning about [Cedar][cedar].
