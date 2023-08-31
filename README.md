@@ -95,12 +95,12 @@ The output looks like the following:
 
 | User           | Result         | Reason                                                         |
 |----------------|----------------|----------------------------------------------------------------|
-| dumbledore     | ALLOW :mage:   | He administrates Hogwarts                                      |
+| dumbledore     | **ALLOW** :mage:   | He administrates Hogwarts                                      |
 | snape          | DENY :no_good: | Does not teach Astronomy                                       |
-| sinistra       | ALLOW :mage:   | She teaches Astronomy :crystal_ball: at Hogwarts               |
+| sinistra       | **ALLOW** :mage:   | She teaches Astronomy :crystal_ball: at Hogwarts               |
 | maxime         | DENY :no_good: | Admin at a completely different school                         |
 | molina         | DENY :no_good: | Teaches at a completely different school                       |
-| barty.crouch   | ALLOW :mage:   | Administrates a higher level org unit that oversees Hogwarts   |
+| barty.crouch   | **ALLOW** :mage:   | Administrates a higher level org unit that oversees Hogwarts   |
 | arthur.weasley | DENY :no_good: | Teaches at the Ministry, but is not an admin                   |
 | president      | DENY :no_good: | Admin at a higher-level org unit, but one that isn't reachable |
 
