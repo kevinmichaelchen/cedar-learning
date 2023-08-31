@@ -38,8 +38,12 @@ for i in \
   Platform::Teacher::\"snape@hogwarts.edu\" \
   Platform::Admin::\"maxime@beauxbatons.edu\" \
   Platform::Teacher::\"teacher@beauxbatons.edu\" \
+  Platform::Admin::\"barty.crouch@ministry.edu\" \
+  Platform::Teacher::\"teacher@ministry.edu\" \
+  Platform::Admin::\"president@magical_congress_usa.edu\" \
+  Platform::Teacher::\"teacher@magical_congress_usa.edu\" \
 ; do \
-  echo "~~~" ; \
+  echo "\n\n~~~" ; \
   echo $i ; \
   cedar authorize \
     --schema examples/schema.json \

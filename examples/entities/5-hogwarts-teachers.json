@@ -1,32 +1,6 @@
 [
   {
     "uid": {
-      "id": "hogwarts",
-      "type": "Platform::OrganizationalUnit"
-    },
-    "parents": [
-      {
-        "type": "Platform::OrganizationalUnit",
-        "id": "ministry_of_magic"
-      }
-    ],
-    "attrs": {}
-  },
-  {
-    "uid": {
-      "id": "hogwarts_astronomy",
-      "type": "Platform::Classroom"
-    },
-    "parents": [
-      {
-        "type": "Platform::OrganizationalUnit",
-        "id": "hogwarts"
-      }
-    ],
-    "attrs": {}
-  },
-  {
-    "uid": {
       "id": "dumbledore@hogwarts.edu",
       "type": "Platform::Admin"
     },

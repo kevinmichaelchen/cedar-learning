@@ -1,0 +1,42 @@
+[
+  {
+    "uid": {
+      "id": "president@magical_congress_usa.edu",
+      "type": "Platform::Admin"
+    },
+    "parents": [
+      {
+        "id": "magical_congress_usa",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "magical_congress_usa"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "teacher@magical_congress_usa.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "magical_congress_usa",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "magical_congress_usa"
+        }
+      }
+    }
+  }
+]

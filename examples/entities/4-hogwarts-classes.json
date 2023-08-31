@@ -1,0 +1,15 @@
+[
+  {
+    "uid": {
+      "id": "hogwarts_astronomy",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  }
+]

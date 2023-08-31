@@ -1,0 +1,42 @@
+[
+  {
+    "uid": {
+      "id": "barty.crouch@ministry.edu",
+      "type": "Platform::Admin"
+    },
+    "parents": [
+      {
+        "id": "ministry_of_magic",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "ministry_of_magic"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "teacher@ministry.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "ministry_of_magic",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "ministry_of_magic"
+        }
+      }
+    }
+  }
+]
