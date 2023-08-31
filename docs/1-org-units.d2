@@ -19,19 +19,46 @@ congress -> confederation
 
 hogwarts: Hogwarts {
   shape: hexagon
+  style: {
+    stroke-width: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fill-pattern: dots
+  }
 }
 hogwarts -> ministry: {
   style: {
     animated: true
+    stroke: "#007500"
   }
 }
 
 beauxbatons: Beauxbatons {
   shape: hexagon
+  style: {
+    stroke-width: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fill-pattern: dots
+  }
 }
-beauxbatons -> ministry
+beauxbatons -> ministry: {
+  style: {
+    stroke: "#007500"
+  }
+}
 
 ilvermorny: Ilvermorny {
   shape: hexagon
+  style: {
+    stroke-width: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fill-pattern: dots
+  }
 }
-ilvermorny -> congress
+ilvermorny -> congress: {
+  style: {
+    stroke: "#007500"
+  }
+}

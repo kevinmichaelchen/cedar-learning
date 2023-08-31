@@ -6,7 +6,7 @@ To illustrate how Cedar works, we'll borrow the organizational structures from t
 
 ## The Org Units
 
-We'll start with the organizational units. These are the confederations, ministrie, departments, and schools that encompass the entire organizational ontology.
+We'll start with the organizational units. These are the confederations, ministries, departments, and schools that encompass the entire organizational ontology.
 
 ![org-units](./1-org-units.svg)
 

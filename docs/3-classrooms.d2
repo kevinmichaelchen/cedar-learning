@@ -1,5 +1,39 @@
 direction: up
 
+vars: {
+  styles: {
+    classroom: {
+      border-radius: 999
+      stroke-width: 3
+      stroke: "#007500"
+      fill: "#00D100"
+      fill-pattern: dots
+    }
+    classroomLinkAnimated: {
+      animated: true
+      stroke: "#007500"
+      stroke-width: 3
+    }
+    classroomLink: {
+      stroke: "#007500"
+      stroke-width: 1
+    }
+  }
+  classroom: {
+    borderRadius: 999
+    strokeWidth: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fillPattern: dots
+  }
+  primaryColors: {
+    button: {
+      active: "#4baae5"
+      border: black
+    }
+  }
+}
+
 ministry: Ministry of Magic {
   shape: hexagon
 }
@@ -52,34 +86,41 @@ molina -> beauxbatons: Teacher
 
 astronomy: Astronomy {
   style: {
-    border-radius: 999
-    stroke-width: 3
-    stroke: "#007500"
-    fill: "#00D100"
-    fill-pattern: dots
+    border-radius: ${classroom.borderRadius}
+    stroke-width: ${classroom.strokeWidth}
+    stroke: ${classroom.stroke}
+    fill: ${classroom.fill}
+    fill-pattern: ${classroom.fillPattern}
   }
 }
 astronomy -> hogwarts: Classroom {
-  style: {
-    animated: true
-    stroke: "#00D100"
-    stroke-width: 3
-  }
+  style: ${styles.classroomLinkAnimated}
 }
 
 potions: Potions {
-  style: {
-    border-radius: 999
-    stroke-width: 3
-    stroke: "#007500"
-    fill: "#00D100"
-    fill-pattern: dots
-  }
+  style: ${styles.classroom}
 }
 potions -> beauxbatons: Classroom {
+  style: ${styles.classroomLink}
+}
+
+charms: Charms {
+  style: ${styles.classroom}
+}
+charms -> hogwarts {
+  style: ${styles.classroomLink}
+}
+
+other: Other {
   style: {
-    animated: true
-    stroke: "#00D100"
-    stroke-width: 3
-  }
+      border-radius: 999
+      stroke-width: 3
+      stroke: "#007500"
+      fill: "#00D100"
+      fill-pattern: dots
+      multiple: true
+    }
+}
+other -> hogwarts {
+  style: ${styles.classroomLink}
 }
