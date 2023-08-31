@@ -63,9 +63,9 @@ Examples of data changes include:
 
 The answer is as you'd expect:
 
-- Teachers or administrators of _Hogwarts School of Witchcraft and Wizardry_ can view classrooms at Hogwarts.
-- Employees (teachers or admins) of any Hogwarts parent org units (e.g., the Ministry of Magic) can view Hogwarts classrooms.
-- Employees of other schools cannot view Hogwarts classrooms.
+- Administrators of _Hogwarts School of Witchcraft and Wizardry_ can view classrooms at Hogwarts.
+- Administrators of any higher-level org units — of which Hogwarts is a descendant — may view classrooms at Hogwarts.
+- Any teachers at Hogwarts that directly teach the class may view the classroom.
 
 ```shell
 for i in \
