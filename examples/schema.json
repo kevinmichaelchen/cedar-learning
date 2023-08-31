@@ -1,0 +1,75 @@
+{
+  "Platform": {
+    "entityTypes": {
+      "OrganizationalUnit": {
+        "memberOfTypes": [
+          "OrganizationalUnit"
+        ],
+        "shape": {
+          "type": "Record",
+          "attributes": {}
+        }
+      },
+      "Classroom": {
+        "memberOfTypes": [
+          "OrganizationalUnit"
+        ],
+        "shape": {
+          "type": "Record",
+          "attributes": {}
+        }
+      },
+      "Teacher": {
+        "memberOfTypes": [
+          "Classroom"
+        ],
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "organizationalUnit": {
+              "type": "Entity",
+              "name": "OrganizationalUnit"
+            }
+          }
+        }
+      },
+      "Child": {
+        "memberOfTypes": [
+          "Classroom"
+        ],
+        "shape": {
+          "type": "Record",
+          "attributes": {}
+        }
+      }
+    },
+    "actions": {
+      "viewChild": {
+        "appliesTo": {
+          "principalTypes": [
+            "Teacher"
+          ],
+          "resourceTypes": [
+            "Child"
+          ]
+        }
+      },
+      "viewClassroom": {
+        "memberOf": [
+          {
+            "id": "viewChild",
+            "type": "Action"
+          }
+        ],
+        "appliesTo": {
+          "principalTypes": [
+            "Teacher"
+          ],
+          "resourceTypes": [
+            "Classroom"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,10 @@
 permit(
-  principal in Role::"Admin",
+  principal in Platform::Teacher,
   action in [
-    Action::"get",
-    Action::"list",
-    Action::"update",
-    Action::"create",
-    Action::"delete"
+    Platform::Action::"viewClassroom"
   ],
-  resource == Document::"cedar-agent.pdf"
-);
+  resource in ?resource
+)
+when {
+  resource in principal.organizationalUnit
+};
