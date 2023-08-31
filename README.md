@@ -4,8 +4,10 @@ Why?
 
 - It seems [more fitting][permit-opa-cedar] for application-level authorization than something like Open Policy / Rego.
 - It has [AWS' backing][aws-cedar-press] and has been rigorously tested.
-- Itis compatible with [AWS Verified Permissions][aws-vp], a managed fine-grained authorization service.
+- It's compatible with [AWS Verified Permissions][aws-vp], a managed fine-grained authorization service.
+  - There's even a [Terraform module][aws-vp-tf] for that coming soon!
 
+[aws-vp-tf]: https://github.com/hashicorp/terraform-provider-aws/issues/32158
 [aws-vp]: https://aws.amazon.com/verified-permissions/
 [aws-cedar-press]: https://aws.amazon.com/about-aws/whats-new/2023/05/cedar-open-source-language-access-control/
 [cedar]: https://docs.cedarpolicy.com/
