@@ -105,3 +105,16 @@ cedar authorize \
   --action "Action::\"delete\"" \
   --resource "Document::\"cedar-agent.pdf\""
 ```
+
+### link_template
+
+Instantiates a new policy from a policy template.
+
+```shell
+cedar link \
+  --policies-file examples/policies/templates/teacher-class-read.cedar \
+  --template-linked-file examples/policies/teacher-class-read-1.cedar \
+  --template-id teacher-class-read \
+  --new-id teacher-class-read-1 \
+  --arguments '{"?resource": "Platform::Classroom"}'
+```
