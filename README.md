@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./forest.jpg" width="200" />
+  <img src="./forest.jpg" width="600" />
 </p>
 
 Just me learning about [Cedar][cedar].
