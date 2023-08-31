@@ -21,7 +21,7 @@
   },
   {
     "uid": {
-      "id": "teacher@ministry.edu",
+      "id": "arthur.weasley@ministry.edu",
       "type": "Platform::Teacher"
     },
     "parents": [

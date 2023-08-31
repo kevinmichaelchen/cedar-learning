@@ -21,7 +21,7 @@
   },
   {
     "uid": {
-      "id": "teacher@beauxbatons.edu",
+      "id": "molina@beauxbatons.edu",
       "type": "Platform::Teacher"
     },
     "parents": [

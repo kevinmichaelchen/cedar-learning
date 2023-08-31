@@ -68,7 +68,7 @@
   },
   {
     "uid": {
-      "id": "teacher@ministry.edu",
+      "id": "arthur.weasley@ministry.edu",
       "type": "Platform::Teacher"
     },
     "parents": [
@@ -214,7 +214,7 @@
   },
   {
     "uid": {
-      "id": "teacher@beauxbatons.edu",
+      "id": "molina@beauxbatons.edu",
       "type": "Platform::Teacher"
     },
     "parents": [

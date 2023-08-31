@@ -32,6 +32,12 @@ I'm using one tool here:
 
 We can perform authorization checks with the Cedar CLI by pointing it at our data and policies, and letting it evaluate an authorization decision for a given principal (user), action (read), and resource (classroom).
 
+### Are you familiar with the world of Harry Potter?
+
+We illustrate how authorization works by borrowing examples from Harry Potter.
+
+Check out the [**docs**](./docs) folder for details.
+
 ### Who can view Hogwarts classrooms?
 
 The answer is as you'd expect:
@@ -45,9 +51,9 @@ for i in \
   Platform::Admin::\"dumbledore@hogwarts.edu\" \
   Platform::Teacher::\"snape@hogwarts.edu\" \
   Platform::Admin::\"maxime@beauxbatons.edu\" \
-  Platform::Teacher::\"teacher@beauxbatons.edu\" \
+  Platform::Teacher::\"molina@beauxbatons.edu\" \
   Platform::Admin::\"barty.crouch@ministry.edu\" \
-  Platform::Teacher::\"teacher@ministry.edu\" \
+  Platform::Teacher::\"arthur.weasley@ministry.edu\" \
   Platform::Admin::\"president@magical_congress_usa.edu\" \
   Platform::Teacher::\"teacher@magical_congress_usa.edu\" \
 ; do \
