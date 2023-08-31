@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./forest.jpg" width="200" />
+</p>
+
 Just me learning about [Cedar][cedar].
 
 Why?
@@ -30,7 +34,11 @@ We can perform authorization checks with the Cedar CLI by pointing it at our dat
 
 ### Who can view Hogwarts classrooms?
 
-The answer is as you'd expect: only teachers or administrators of _Hogwarts School of Witchcraft and Wizardry_.
+The answer is as you'd expect:
+
+- Teachers or administrators of _Hogwarts School of Witchcraft and Wizardry_ can view classrooms at Hogwarts.
+- Employees (teachers or admins) of any Hogwarts parent org units (e.g., the Ministry of Magic) can view Hogwarts classrooms.
+- Employees of other schools cannot view Hogwarts classrooms.
 
 ```shell
 for i in \
