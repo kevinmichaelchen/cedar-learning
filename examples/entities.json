@@ -22,6 +22,19 @@
   },
   {
     "uid": {
+      "id": "beauxbatons",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "ministry_of_magic"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
       "id": "hogwarts",
       "type": "Platform::OrganizationalUnit"
     },
@@ -32,6 +45,59 @@
       }
     ],
     "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts_astronomy",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "dumbledore@hogwarts.edu",
+      "type": "Platform::Admin"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "snape@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
   },
   {
     "uid": {
@@ -48,20 +114,7 @@
   },
   {
     "uid": {
-      "id": "astronomy",
-      "type": "Platform::Classroom"
-    },
-    "parents": [
-      {
-        "type": "Platform::OrganizationalUnit",
-        "id": "hogwarts"
-      }
-    ],
-    "attrs": {}
-  },
-  {
-    "uid": {
-      "id": "potions",
+      "id": "beauxbatons_potions",
       "type": "Platform::Classroom"
     },
     "parents": [
@@ -74,51 +127,27 @@
   },
   {
     "uid": {
-      "id": "dumbledore@hogwarts.edu",
-      "type": "Platform::Teacher"
-    },
-    "parents": [
-      {
-        "id": "hogwarts",
-        "type": "Platform::OrganizationalUnit"
-      }
-    ],
-    "attrs": {
-      "organizationalUnit": {
-        "__entity": {
-          "type": "Platform::OrganizationalUnit",
-          "id": "hogwarts"
-        }
-      }
-    }
-  },
-  {
-    "uid": {
-      "id": "dumbledore@hogwarts.edu",
-      "type": "Platform::Teacher"
-    },
-    "parents": [
-      {
-        "id": "hogwarts",
-        "type": "Platform::OrganizationalUnit"
-      },
-      {
-        "id": "astronomy",
-        "type": "Platform::Classroom"
-      }
-    ],
-    "attrs": {
-      "organizationalUnit": {
-        "__entity": {
-          "type": "Platform::OrganizationalUnit",
-          "id": "hogwarts"
-        }
-      }
-    }
-  },
-  {
-    "uid": {
       "id": "maxime@beauxbatons.edu",
+      "type": "Platform::Admin"
+    },
+    "parents": [
+      {
+        "id": "beauxbatons",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "beauxbatons"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "teacher@beauxbatons.edu",
       "type": "Platform::Teacher"
     },
     "parents": [
@@ -127,7 +156,7 @@
         "type": "Platform::OrganizationalUnit"
       },
       {
-        "id": "potions",
+        "id": "beauxbatons_potions",
         "type": "Platform::Classroom"
       }
     ],

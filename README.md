@@ -26,11 +26,11 @@ Can Albus Dumbledore view the Astronomy classroom at Hogwarts?
 ```shell
 cedar authorize \
   --schema examples/schema.json \
-  --policies examples/policies/viewClassroom.cedar \
+  --policies examples/policies.cedar \
   --entities examples/entities.json \
-  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
+  --principal Platform::Admin::\"dumbledore@hogwarts.edu\" \
   --action Platform::Action::\"viewClassroom\" \
-  --resource Platform::Classroom::\"astronomy\"
+  --resource Platform::Classroom::\"hogwarts_astronomy\"
 ```
 
 As you'd expect, because Dumbledore teaches at Hogwarts, the reponse is:
@@ -46,11 +46,11 @@ Can Albus Dumbledore view the Potions classroom at Beauxbatons?
 ```shell
 cedar authorize \
   --schema examples/schema.json \
-  --policies examples/policies/viewClassroom.cedar \
+  --policies examples/policies.cedar \
   --entities examples/entities.json \
-  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
+  --principal Platform::Admin::\"dumbledore@hogwarts.edu\" \
   --action Platform::Action::\"viewClassroom\" \
-  --resource Platform::Classroom::\"potions\"
+  --resource Platform::Classroom::\"beauxbatons_potions\"
 ```
 
 As you'd expect, because Dumbledore teaches at Hogwarts and not Beauxbatons,
@@ -73,12 +73,13 @@ DENY
 
 ## Tasks
 
-### merge_data
+### merge
 
-Merges all entities data into one `entities.json` file.
+Merges all entities and policies into `entities.json` and `policies.cedar`, respectively.
 
 ```shell
 jq -s '.[0]=([.[]]|flatten)|.[0]' examples/entities/*.json > examples/entities.json
+cat examples/policies/* > examples/policies.cedar
 ```
 
 ### check_parse
@@ -87,7 +88,7 @@ Check that policy successfully parses.
 
 ```shell
 cedar check-parse \
-  --policies examples/policies/viewClassroom.cedar
+  --policies examples/policies.cedar
 ```
 
 ### validate
@@ -97,5 +98,5 @@ Validates the policy against the schema.
 ```shell
 cedar validate \
   --schema examples/schema.json \
-  --policies examples/policies/viewClassroom.cedar
+  --policies examples/policies.cedar
 ```

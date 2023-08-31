@@ -19,6 +19,20 @@
           "attributes": {}
         }
       },
+      "Admin": {
+        "memberOfTypes": [
+          "OrganizationalUnit"
+        ],
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "organizationalUnit": {
+              "type": "Entity",
+              "name": "OrganizationalUnit"
+            }
+          }
+        }
+      },
       "Teacher": {
         "memberOfTypes": [
           "Classroom"
@@ -47,7 +61,8 @@
       "viewChild": {
         "appliesTo": {
           "principalTypes": [
-            "Teacher"
+            "Teacher",
+            "Admin"
           ],
           "resourceTypes": [
             "Child"
@@ -63,7 +78,8 @@
         ],
         "appliesTo": {
           "principalTypes": [
-            "Teacher"
+            "Teacher",
+            "Admin"
           ],
           "resourceTypes": [
             "Classroom"

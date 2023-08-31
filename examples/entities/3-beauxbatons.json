@@ -1,0 +1,72 @@
+[
+  {
+    "uid": {
+      "id": "beauxbatons",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "ministry_of_magic"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "beauxbatons_potions",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "beauxbatons"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "maxime@beauxbatons.edu",
+      "type": "Platform::Admin"
+    },
+    "parents": [
+      {
+        "id": "beauxbatons",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "beauxbatons"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "teacher@beauxbatons.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "beauxbatons",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "beauxbatons_potions",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "beauxbatons"
+        }
+      }
+    }
+  }
+]
