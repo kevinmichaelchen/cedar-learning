@@ -1,6 +1,15 @@
 Just me learning about [Cedar][cedar].
 
+Why?
+
+- It seems [more fitting][permit-opa-cedar] for application-level authorization than something like Open Policy / Rego.
+- It has [AWS' backing][aws-cedar-press] and has been rigorously tested.
+- Itis compatible with [AWS Verified Permissions][aws-vp], a managed fine-grained authorization service.
+
+[aws-vp]: https://aws.amazon.com/verified-permissions/
+[aws-cedar-press]: https://aws.amazon.com/about-aws/whats-new/2023/05/cedar-open-source-language-access-control/
 [cedar]: https://docs.cedarpolicy.com/
+[permit-opa-cedar]: https://www.permit.io/blog/opa-vs-cedar
 
 ## Prerequisites
 
