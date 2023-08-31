@@ -97,10 +97,10 @@ The output looks like the following:
 | ------------- | -------------------- | ------------------------- |
 | dumbledore    | ALLOW :mage:         | He administrates Hogwarts |
 | snape         | DENY                 | Does not teach Astronomy  |
-| sinistra      | ALLOW :mage:         | She teaches Astronomy :crystal_ball:     |
+| sinistra      | ALLOW :mage:         | She teaches Astronomy :crystal_ball: at Hogwarts    |
 | maxime         | DENY          | Admin at a completely different school  |
 | molina         | DENY          | Teaches at a completely different school  |
-| barty.crouch         | ALLOW :mage:          | Administrates a higher level org unit  |
+| barty.crouch         | ALLOW :mage:          | Administrates a higher level org unit that oversees Hogwarts |
 | arthur.weasley         | DENY          | Teaches at the Ministry, but is not an admin |
 | president         | DENY          | Admin at a higher-level org unit, but one that isn't reachable  |
 
