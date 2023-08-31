@@ -2,9 +2,7 @@ Just me learning about [Cedar][cedar].
 
 [cedar]: https://docs.cedarpolicy.com/
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 I'm using one tool here:
 
@@ -15,56 +13,37 @@ I'm using one tool here:
 [tea]: https://docs.tea.xyz/getting-started/install-tea
 [cedar-cli]: https://github.com/cedar-policy/cedar/tree/main/cedar-policy-cli
 
-### Authorization Checks
+## Getting Started
 
-#### Albus Dumbledore
+We can perform authorization checks with the Cedar CLI by pointing it at our data and policies, and letting it evaluate an authorization decision for a given principal (user), action (read), and resource (classroom).
 
-##### Hogwarts Classrooms
+### Who can view Hogwarts classrooms?
 
-Can Albus Dumbledore view the Astronomy classroom at Hogwarts?
-
-```shell
-cedar authorize \
-  --schema examples/schema.json \
-  --policies examples/policies.cedar \
-  --entities examples/entities.json \
-  --principal Platform::Admin::\"dumbledore@hogwarts.edu\" \
-  --action Platform::Action::\"viewClassroom\" \
-  --resource Platform::Classroom::\"hogwarts_astronomy\"
-```
-
-As you'd expect, because Dumbledore teaches at Hogwarts, the reponse is:
-
-```
-ALLOW
-```
-
-##### Beauxbatons Classrooms
-
-Can Albus Dumbledore view the Potions classroom at Beauxbatons?
+The answer, as you'd expect, is only teachers or administrators of Hogwarts School of Witchcraft and Wizardry.
 
 ```shell
-cedar authorize \
-  --schema examples/schema.json \
-  --policies examples/policies.cedar \
-  --entities examples/entities.json \
-  --principal Platform::Admin::\"dumbledore@hogwarts.edu\" \
-  --action Platform::Action::\"viewClassroom\" \
-  --resource Platform::Classroom::\"beauxbatons_potions\"
-```
-
-As you'd expect, because Dumbledore teaches at Hogwarts and not Beauxbatons,
-the reponse is:
-
-```
-DENY
+for i in \
+  Platform::Admin::\"dumbledore@hogwarts.edu\" \
+  Platform::Teacher::\"snape@hogwarts.edu\" \
+  Platform::Admin::\"maxime@beauxbatons.edu\" \
+  Platform::Teacher::\"teacher@beauxbatons.edu\" \
+; do \
+  echo "~~~" ; \
+  echo $i ; \
+  cedar authorize \
+    --schema examples/schema.json \
+    --policies examples/policies.cedar \
+    --entities examples/entities.json \
+    --principal $i \
+    --action Platform::Action::\"viewClassroom\" \
+    --resource Platform::Classroom::\"hogwarts_astronomy\" ; \
+done
 ```
 
 ## Further Research
 
 - Policy [Templates][templates]
-  - We can't write a distinct policy for every principal/resource combination. That would be crazy.
-- Strong typing with [schemas][schemas]
+  - We can't write a distinct policy for every principal/resource combination. That would be crazy
 - One-liner to stringify all policies into one JSON file
 - Calling this from Golang services?
 
