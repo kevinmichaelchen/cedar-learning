@@ -38,6 +38,8 @@ We illustrate how authorization works by borrowing examples from Harry Potter.
 
 Check out the [**docs**](./docs) folder for details.
 
+![students](./docs/4-students.svg)
+
 ### Who can view Hogwarts classrooms?
 
 The answer is as you'd expect:

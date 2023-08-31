@@ -1,0 +1,29 @@
+direction: up
+
+confederation: ICW\n\n(International\nConfederation\nof Wizards) {
+  shape: hexagon
+}
+
+ministry: Ministry of Magic (UK) {
+  shape: hexagon
+}
+congress: Congress of Wizards (US) {
+  shape: hexagon
+}
+ministry -> confederation
+congress -> confederation
+
+hogwarts: Hogwarts {
+  shape: hexagon
+}
+hogwarts -> ministry
+
+beauxbatons: Beauxbatons {
+  shape: hexagon
+}
+beauxbatons -> ministry
+
+ilvermorny: Ilvermorny {
+  shape: hexagon
+}
+ilvermorny -> congress

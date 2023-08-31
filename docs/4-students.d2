@@ -1,0 +1,78 @@
+direction: up
+
+ministry: Ministry of Magic {
+  shape: hexagon
+}
+hogwarts: Hogwarts {
+  shape: hexagon
+}
+beauxbatons: Beauxbatons {
+  shape: hexagon
+}
+
+hogwarts -> ministry
+beauxbatons -> ministry
+
+crouch: Barty Crouch {
+  shape: person
+}
+
+weasley: Arthur Weasley {
+  shape: person
+}
+
+crouch -> ministry: Admin
+weasley -> ministry: Teacher
+
+dumbledore: Albus Dumbledore {
+  shape: person
+}
+
+snape: Severus Snape {
+  shape: person
+}
+
+dumbledore -> hogwarts: Admin
+snape -> hogwarts: Teacher
+
+maxime: Olympe Maxime {
+  shape: person
+}
+
+molina: Coye Molina {
+  shape: person
+}
+
+maxime -> beauxbatons: Admin
+molina -> beauxbatons: Teacher
+
+################
+## CLASSROOMS ##
+################
+
+astronomy: Astronomy {
+  shape: oval
+}
+astronomy -> hogwarts: Classroom
+
+potions: Potions {
+  shape: oval
+}
+potions -> beauxbatons: Classroom
+
+harry: Harry Potter {
+  style: {
+    border-radius: 999
+    stroke-width: 3
+    stroke: "#f4a261"
+    fill: "#f7be91"
+    fill-pattern: dots
+  }
+}
+harry -> astronomy: Student {
+  style: {
+    animated: true
+    stroke: deepskyblue
+    stroke-width: 3
+  }
+}
