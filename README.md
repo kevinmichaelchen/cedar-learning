@@ -98,7 +98,8 @@ If we run the same checks, but for `beauxbatons_potions`, we'll notice the inver
   - We can't write a distinct policy for every principal/resource combination. That would be crazy
 - One-liner to stringify all policies into one JSON file
 - Calling this from Golang services?
-  - See the [Go SDK][go-sdk]
+  - See the [Go SDK][go-sdk] for AWS Verified Permissions
+  - Also see Cedar Agent's REST API
 
 [go-sdk]: https://github.com/aws/aws-sdk-go-v2/blob/v1.21.0/service/verifiedpermissions/api_op_IsAuthorized.go
 [templates]: https://docs.cedarpolicy.com/templates.html
