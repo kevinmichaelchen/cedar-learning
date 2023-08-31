@@ -10,13 +10,21 @@ ministry: Ministry of Magic (UK) {
 congress: Congress of Wizards (US) {
   shape: hexagon
 }
-ministry -> confederation
+ministry -> confederation: {
+  style: {
+    animated: true
+  }
+}
 congress -> confederation
 
 hogwarts: Hogwarts {
   shape: hexagon
 }
-hogwarts -> ministry
+hogwarts -> ministry: {
+  style: {
+    animated: true
+  }
+}
 
 beauxbatons: Beauxbatons {
   shape: hexagon
