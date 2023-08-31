@@ -40,6 +40,9 @@
         "shape": {
           "type": "Record",
           "attributes": {
+            "isTeacher": {
+              "type": "Boolean"
+            },
             "organizationalUnit": {
               "type": "Entity",
               "name": "OrganizationalUnit"

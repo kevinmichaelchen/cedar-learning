@@ -78,6 +78,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -118,6 +119,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -278,6 +280,31 @@
   },
   {
     "uid": {
+      "id": "aurora.sinistra@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "hogwarts_astronomy",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "isTeacher": true,
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
       "id": "snape@hogwarts.edu",
       "type": "Platform::Teacher"
     },
@@ -292,6 +319,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -316,6 +344,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -336,6 +365,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -360,6 +390,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -384,6 +415,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -408,6 +440,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
@@ -556,6 +589,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",

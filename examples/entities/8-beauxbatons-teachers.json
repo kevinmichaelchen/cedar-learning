@@ -35,6 +35,7 @@
       }
     ],
     "attrs": {
+      "isTeacher": true,
       "organizationalUnit": {
         "__entity": {
           "type": "Platform::OrganizationalUnit",
