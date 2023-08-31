@@ -40,6 +40,25 @@ Check out the [**docs**](./docs) folder for details.
 
 ![students](./docs/4-students.svg)
 
+### Where are the policies defined?
+
+See [**policies.cedar**](./examples/policies.cedar).
+
+### Where is the data defined?
+
+If you want to torture yourself, you can view the [**entities**](./examples/entities) directory, which we merge together in one large [**entities.json**](./examples/entities.json) file.
+
+In production, we could use something like [OPAL][opal] to sync data changes from a database into Cedar Agent.
+
+Examples of data changes include:
+
+- a teacher joins/leaves a school
+- a teacher is assigned/unassigned a classroom
+- a classroom gets created/destroyed
+- a student enrolls/un-enrolls from a classroom
+
+[opal]: https://www.opal.ac/
+
 ### Who can view Hogwarts classrooms?
 
 The answer is as you'd expect:
