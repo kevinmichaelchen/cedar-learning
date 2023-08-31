@@ -51,23 +51,35 @@ molina -> beauxbatons: Teacher
 ################
 
 astronomy: Astronomy {
-  shape: oval
+  style: {
+    border-radius: 999
+    stroke-width: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fill-pattern: dots
+  }
 }
 astronomy -> hogwarts: Classroom {
   style: {
     animated: true
-    stroke: deepskyblue
+    stroke: "#00D100"
     stroke-width: 3
   }
 }
 
 potions: Potions {
-  shape: oval
+  style: {
+    border-radius: 999
+    stroke-width: 3
+    stroke: "#007500"
+    fill: "#00D100"
+    fill-pattern: dots
+  }
 }
 potions -> beauxbatons: Classroom {
   style: {
     animated: true
-    stroke: deepskyblue
+    stroke: "#00D100"
     stroke-width: 3
   }
 }

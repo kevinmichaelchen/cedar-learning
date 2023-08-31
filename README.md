@@ -36,7 +36,7 @@ We can perform authorization checks with the Cedar CLI by pointing it at our dat
 
 We illustrate how authorization works by borrowing examples from Harry Potter.
 
-Check out the [**docs**](./docs) folder for details.
+Check out the [**docs**](./docs/README.md) folder for details.
 
 ![students](./docs/4-students.svg)
 
