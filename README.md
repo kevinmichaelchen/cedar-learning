@@ -46,9 +46,9 @@ See [**policies.cedar**](./examples/policies.cedar).
 
 ### Where is the data defined?
 
-If you want to torture yourself, you can view the [**entities**](./examples/entities) directory, which we merge together in one large [**entities.json**](./examples/entities.json) file.
+If you want to torture yourself by looking at JSON, see the [**entities**](./examples/entities) directory, or [**entities.json**](./examples/entities.json) (which is just the concatenation of all those files).
 
-In production, we could use something like [OPAL][opal] to sync data changes from a database into Cedar Agent.
+In production, we could use an event-driven architecture with [OPAL][opal] to sync data changes from a database into Cedar Agent.
 
 Examples of data changes include:
 
