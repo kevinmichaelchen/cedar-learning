@@ -1,9 +1,9 @@
 permit(
-  principal in Platform::Teacher,
+  principal,
   action in [
     Platform::Action::"viewClassroom"
   ],
-  resource in Platform::Classroom
+  resource
 )
 when {
   resource in principal.organizationalUnit

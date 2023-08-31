@@ -46,7 +46,7 @@ tea --sync cedar
 
 ### merge_data
 
-Merges all data into one JSON file.
+Merges all entities data into one entities.json file.
 
 ```shell
 jq -s '.[0]=([.[]]|flatten)|.[0]' examples/entities/*.json > examples/entities.json
