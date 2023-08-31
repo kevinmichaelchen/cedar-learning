@@ -35,6 +35,19 @@
   },
   {
     "uid": {
+      "id": "beauxbatons",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "ministry_of_magic"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
       "id": "astronomy",
       "type": "Platform::Classroom"
     },
@@ -42,6 +55,19 @@
       {
         "type": "Platform::OrganizationalUnit",
         "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "potions",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "beauxbatons"
       }
     ],
     "attrs": {}
@@ -86,6 +112,30 @@
         "__entity": {
           "type": "Platform::OrganizationalUnit",
           "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "maxime@beauxbatons.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "beauxbatons",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "potions",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "beauxbatons"
         }
       }
     }

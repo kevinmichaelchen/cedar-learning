@@ -35,13 +35,13 @@
   },
   {
     "uid": {
-      "id": "astronomy",
-      "type": "Platform::Classroom"
+      "id": "beauxbatons",
+      "type": "Platform::OrganizationalUnit"
     },
     "parents": [
       {
         "type": "Platform::OrganizationalUnit",
-        "id": "hogwarts"
+        "id": "ministry_of_magic"
       }
     ],
     "attrs": {}

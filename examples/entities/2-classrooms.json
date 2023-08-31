@@ -1,0 +1,28 @@
+[
+  {
+    "uid": {
+      "id": "astronomy",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "potions",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "beauxbatons"
+      }
+    ],
+    "attrs": {}
+  }
+]

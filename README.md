@@ -31,6 +31,51 @@ tea --sync cedar
 
 [tea]: https://docs.tea.xyz/getting-started/install-tea
 
+### Authorization Checks
+
+#### Albus Dumbledore
+
+##### Hogwarts Classrooms
+
+Can Albus Dumbledore view the Astronomy classroom at Hogwarts?
+
+```shell
+cedar authorize \
+  --schema examples/schema.json \
+  --policies examples/policies/viewClassroom.cedar \
+  --entities examples/entities.json \
+  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
+  --action Platform::Action::\"viewClassroom\" \
+  --resource Platform::Classroom::\"astronomy\"
+```
+
+As you'd expect, because Dumbledore teaches at Hogwarts, the reponse is:
+
+```
+ALLOW
+```
+
+##### Beauxbatons Classrooms
+
+Can Albus Dumbledore view the Potions classroom at Beauxbatons?
+
+```shell
+cedar authorize \
+  --schema examples/schema.json \
+  --policies examples/policies/viewClassroom.cedar \
+  --entities examples/entities.json \
+  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
+  --action Platform::Action::\"viewClassroom\" \
+  --resource Platform::Classroom::\"potions\"
+```
+
+As you'd expect, because Dumbledore teaches at Hogwarts and not Beauxbatons,
+the reponse is:
+
+```
+DENY
+```
+
 ## Further Research
 
 - Policy [Templates][templates]
@@ -69,18 +114,4 @@ Validates the policy against the schema.
 cedar validate \
   --schema examples/schema.json \
   --policies examples/policies/viewClassroom.cedar
-```
-
-### authorize
-
-Sample authorization command
-
-```shell
-cedar authorize \
-  --schema examples/schema.json \
-  --policies examples/policies/viewClassroom.cedar \
-  --entities examples/entities.json \
-  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
-  --action Platform::Action::\"viewClassroom\" \
-  --resource Platform::Classroom::\"astronomy\"
 ```

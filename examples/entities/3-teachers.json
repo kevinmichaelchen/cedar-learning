@@ -42,5 +42,29 @@
         }
       }
     }
+  },
+  {
+    "uid": {
+      "id": "maxime@beauxbatons.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "beauxbatons",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "potions",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "beauxbatons"
+        }
+      }
+    }
   }
 ]
