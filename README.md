@@ -6,30 +6,14 @@ Just me learning about [Cedar][cedar].
 
 ### Prerequisites
 
-I'm using a few tools here:
+I'm using one tool here:
 
-- https://github.com/permitio/cedar-agent
-  - A simple HTTP server.
-  - Lets you manage data and policies via REST API.
-  - Comes with nice [OpenAPI][swagger] docs and [Playground][rapidoc].
-- https://github.com/cedar-policy/cedar/tree/main/cedar-policy-cli
-  - Multiple use cases.
-  - Evaluating requests.
-  - Validating policies against a schema.
-  - Linting/parsing policies.
-  - Formatting policies.
-
-[rapidoc]: http://localhost:8180/rapidoc
-[swagger]: http://localhost:8180/swagger-ui
-
-Both of these projects are available in the [Tea][tea] package manager
-
-```
-tea --sync cedar-agent
-tea --sync cedar
-```
+- The [`cedar` CLI][cedar-cli]
+  - Supports linting, checking, formatting, validating, etc.
+  - Available in the [Tea][tea] package manager: `tea --sync cedar`
 
 [tea]: https://docs.tea.xyz/getting-started/install-tea
+[cedar-cli]: https://github.com/cedar-policy/cedar/tree/main/cedar-policy-cli
 
 ### Authorization Checks
 
@@ -91,7 +75,7 @@ DENY
 
 ### merge_data
 
-Merges all entities data into one entities.json file.
+Merges all entities data into one `entities.json` file.
 
 ```shell
 jq -s '.[0]=([.[]]|flatten)|.[0]' examples/entities/*.json > examples/entities.json
