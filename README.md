@@ -44,53 +44,31 @@ tea --sync cedar
 
 ## Tasks
 
-### start
-
-Runs the Cedar Agent
-
-```shell
-cedar-agent
-```
-
-### store_policies
-
-Store policies in Cedar Agent
-
-```shell
-curl -X PUT \
-  -H "Content-Type: application/json" \
-  -d @./examples/policies.json \
-  http://localhost:8180/v1/policies
-```
-
-### store_data
-
-Store data in Cedar Agent
-
-```shell
-curl -X PUT \
-  -H "Content-Type: application/json" \
-  -d @./examples/data.json \
-  http://localhost:8180/v1/data
-```
-
-### run_check
-
-Runs a sample authorization check
-
-```shell
-http POST http://localhost:8180/v1/is_authorized \
-  principal="User::\"dumbledore@hogwarts.edu\"" \
-  action="Action::\"delete\"" \
-  resource="Document::\"cedar-agent.pdf\""
-```
-
 ### merge_data
 
 Merges all data into one JSON file.
 
 ```shell
-jq -s '.[0]=([.[]]|flatten)|.[0]' examples/data/*.json > examples/data.json
+jq -s '.[0]=([.[]]|flatten)|.[0]' examples/entities/*.json > examples/entities.json
+```
+
+### check_parse
+
+Check that policy successfully parses.
+
+```shell
+cedar check-parse \
+  --policies examples/policies/viewClassroom.cedar
+```
+
+### validate
+
+Validates the policy against the schema.
+
+```shell
+cedar validate \
+  --schema examples/schema.json \
+  --policies examples/policies/viewClassroom.cedar
 ```
 
 ### authorize
@@ -99,22 +77,10 @@ Sample authorization command
 
 ```shell
 cedar authorize \
-  --entities examples/data.json \
-  --policies examples/policies/teacher-class-read.cedar \
-  --principal "User::\"dumbledore@hogwarts.edu\"" \
-  --action "Action::\"delete\"" \
-  --resource "Document::\"cedar-agent.pdf\""
-```
-
-### link_template
-
-Instantiates a new policy from a policy template.
-
-```shell
-cedar link \
-  --policies-file examples/policies/templates/teacher-class-read.cedar \
-  --template-linked-file examples/policies/teacher-class-read-1.cedar \
-  --template-id teacher-class-read \
-  --new-id teacher-class-read-1 \
-  --arguments '{"?resource": "Platform::Classroom"}'
+  --schema examples/schema.json \
+  --policies examples/policies/viewClassroom.cedar \
+  --entities examples/entities.json \
+  --principal Platform::Teacher::\"dumbledore@hogwarts.edu\" \
+  --action Platform::Action::\"viewClassroom\" \
+  --resource Platform::Classroom::\"astronomy\"
 ```

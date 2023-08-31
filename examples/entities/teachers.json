@@ -1,0 +1,46 @@
+[
+  {
+    "uid": {
+      "id": "dumbledore@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  },
+  {
+    "uid": {
+      "id": "dumbledore@hogwarts.edu",
+      "type": "Platform::Teacher"
+    },
+    "parents": [
+      {
+        "id": "hogwarts",
+        "type": "Platform::OrganizationalUnit"
+      },
+      {
+        "id": "astronomy",
+        "type": "Platform::Classroom"
+      }
+    ],
+    "attrs": {
+      "organizationalUnit": {
+        "__entity": {
+          "type": "Platform::OrganizationalUnit",
+          "id": "hogwarts"
+        }
+      }
+    }
+  }
+]

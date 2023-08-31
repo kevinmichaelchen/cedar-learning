@@ -1,0 +1,49 @@
+[
+  {
+    "uid": {
+      "id": "international_wizards",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "ministry_of_magic",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "international_wizards"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "hogwarts",
+      "type": "Platform::OrganizationalUnit"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "ministry_of_magic"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "uid": {
+      "id": "astronomy",
+      "type": "Platform::Classroom"
+    },
+    "parents": [
+      {
+        "type": "Platform::OrganizationalUnit",
+        "id": "hogwarts"
+      }
+    ],
+    "attrs": {}
+  }
+]

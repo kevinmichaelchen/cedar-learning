@@ -3,7 +3,7 @@ permit(
   action in [
     Platform::Action::"viewClassroom"
   ],
-  resource in ?resource
+  resource in Platform::Classroom
 )
 when {
   resource in principal.organizationalUnit
