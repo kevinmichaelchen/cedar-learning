@@ -30,7 +30,7 @@ We can perform authorization checks with the Cedar CLI by pointing it at our dat
 
 ### Who can view Hogwarts classrooms?
 
-The answer, as you'd expect, is only teachers or administrators of Hogwarts School of Witchcraft and Wizardry.
+The answer is as you'd expect: only teachers or administrators of _Hogwarts School of Witchcraft and Wizardry_.
 
 ```shell
 for i in \
@@ -50,6 +50,8 @@ for i in \
     --resource Platform::Classroom::\"hogwarts_astronomy\" ; \
 done
 ```
+
+If we run the same checks, but for `beauxbatons_potions`, we'll notice the inverse: only teachers or admins of _Beauxbatons Academy of Magic_ can view its classrooms.
 
 ## Further Research
 
