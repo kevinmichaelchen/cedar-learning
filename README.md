@@ -1,4 +1,6 @@
-Just me learning about Cedar.
+Just me learning about [Cedar][cedar].
+
+[cedar]: https://docs.cedarpolicy.com/
 
 ## Getting Started
 
@@ -37,7 +39,7 @@ tea --sync cedar
 - One-liner to stringify all policies into one JSON file
 - Calling this from Golang services?
 
-[template]: https://docs.cedarpolicy.com/templates.html
+[templates]: https://docs.cedarpolicy.com/templates.html
 [schemas]: https://docs.cedarpolicy.com/schema.html
 
 ## Tasks
