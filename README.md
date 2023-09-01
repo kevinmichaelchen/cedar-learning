@@ -61,6 +61,8 @@ Examples of data changes include:
 
 ### Who can view Hogwarts classrooms?
 
+#### Cedar CLI
+
 The answer is as you'd expect:
 
 - Administrators of _Hogwarts School of Witchcraft and Wizardry_ can view classrooms at Hogwarts.
@@ -104,6 +106,21 @@ The output looks like the following:
 | arthur.weasley | DENY :no_good: | Teaches at the Ministry, but is not an admin                   |
 | president      | DENY :no_good: | Admin at a higher-level org unit, but one that isn't reachable |
 
+#### Cedar Agent
+
+```shell
+# Start Cedar Agent
+cedar-agent
+
+# Upload policies and data to server
+xc cedar_agent
+
+# Perform authz check
+http POST http://localhost:8180/v1/is_authorized \
+  principal="Platform::Teacher::\"aurora.sinistra@hogwarts.edu\"" \
+  action="Platform::Action::\"viewClassroom\"" \
+  resource="Platform::Classroom::\"hogwarts_astronomy\""
+```
 
 ## Further Research
 
@@ -146,4 +163,43 @@ Validates the policy against the schema.
 cedar validate \
   --schema examples/schema.json \
   --policies examples/policies.cedar
+```
+
+### cedar_agent
+
+Upload policies and data to Cedar Agent
+
+```shell
+for i in examples/policies/*.cedar ; do \
+  echo $(basename $i .cedar) ; \
+  cp $i cedar-agent/ ; \
+
+  # Strip comments
+  sd '(\t| )*//.*$' '' cedar-agent/$(basename $i) ; \
+
+  # Strip newlines
+  sd \\n+ ' ' cedar-agent/$(basename $i) ; \
+
+  # Condense whitespaces into one
+  sd \\s+ ' ' cedar-agent/$(basename $i) ; \
+
+  # Escape double-quotes
+  #sd \" '\\"' cedar-agent/$(basename $i) ; \
+
+  # Build a JSON policy
+  jq -n '[{id: $id, content: $content}]' \
+    --arg id "$(basename $i .cedar)" \
+    --arg content "$(cat cedar-agent/$(basename $i))" > cedar-agent/$(basename $i .cedar).json ; \
+
+  # Execute HTTP Request
+  curl -X PUT \
+    -H "Content-Type: application/json" \
+    -d @./cedar-agent/$(basename $i .cedar).json \
+    http://localhost:8180/v1/policies ; \
+done
+
+curl -X PUT \
+  -H "Content-Type: application/json" \
+  -d @./examples/entities.json \
+  http://localhost:8180/v1/data
 ```
